@@ -19,7 +19,7 @@ A simple PHP input Validation Class.
 ```html+php
 <?php
 if ($_POST) {
-    require_once 'Validation.php';
+    require_once 'class.Validation.php';
 
     $rules = array(
         'email' => 'required|email:zaynali.com',
