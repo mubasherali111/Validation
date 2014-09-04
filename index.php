@@ -3,21 +3,17 @@ if ($_POST) {
     require_once 'Validation.php';
 
     $rules = array(
-        'email' => 'required|email',
+        'email' => 'required|email:zaynali.com',
         'password' => 'required|min_length:8|max_length:30',
         'environment' => 'required|white_list:admin,user,guest'
     );
 
     $validation = new Validation();
 
-    if ($validation->validate($_POST, $rules) === TRUE) {
+    if ($validation->validate($_POST, $rules)) {
         echo "<pre>", print_r($_POST), "</pre>";
     } else {
-        echo "<ul>";
-        foreach ($validation->get_errors() as $error) {
-            echo "<li>" . $error . "</li>";
-        }
-        echo "</ul>";
+        $validation->show_errors();
     }
 }
 ?>
