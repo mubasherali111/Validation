@@ -9,7 +9,7 @@ A simple PHP input Validation Class.
 <span style="font-family: Trebuchet MS, sans-serif; font-size: x-large;">Usage:</span></h2>
 <br />
 <ol style="text-align: left;">
-<li><span style="font-family: 'Trebuchet MS', sans-serif;">At the top of your PHP page, require the "class.Validation.php".</span></li>
+<li><span style="font-family: 'Trebuchet MS', sans-serif;">Require the "class.Validation.php".</span></li>
 <li><span style="font-family: 'Trebuchet MS', sans-serif;">Set the rules according to your field names with pipe '|', sub rule with Colon ':'</span></li>
 <li><span style="font-family: 'Trebuchet MS', sans-serif;">Call the method "validate" with your input data and rules.</span></li>
 <li><span style="font-family: 'Trebuchet MS', sans-serif;">Check if there's any error occurred, Display it.</span></li>
