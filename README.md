@@ -30,6 +30,7 @@ if ($_POST) {
     $validation = new Validation();
 
     if ($validation->validate($_POST, $rules)) {
+        // Validated Data
         echo "<pre>", print_r($_POST), "</pre>";
     } else {
         $validation->show_errors();
