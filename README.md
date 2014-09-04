@@ -33,7 +33,7 @@ if ($_POST) {
         // Validated Data
         echo "<pre>", print_r($_POST), "</pre>";
     } else {
-        $validation->show_errors(['id' => 'errors', 'class' => 'fancy-errors'], TRUE);
+        $validation->show_errors(['id' => 'errors', 'class' => 'errors'], TRUE);
     }
 }
 ?>
@@ -54,4 +54,12 @@ if ($_POST) {
 </html>
 ```
 
-
+<h2>Rules:</h2>
+```
+1. required     -   input field is required.
+2. email        -   Filter E-Mail Address to standard or your specific domain 
+                    e.g. (@yourdomain.com).
+3. min_length   -   check if a minimum length of a string exceeds.
+4. max_length   -   check if a minimum length of a string exceeds.
+5. white_list   -   validates data from a given array of selected values.
+```
