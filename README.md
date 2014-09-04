@@ -33,7 +33,7 @@ if ($_POST) {
         // Validated Data
         echo "<pre>", print_r($_POST), "</pre>";
     } else {
-        $validation->show_errors();
+        $validation->show_errors(['id' => 'errors', 'class' => 'fancy-errors'], TRUE);
     }
 }
 ?>
