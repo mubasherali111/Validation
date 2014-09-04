@@ -56,12 +56,12 @@ class Validation {
      * @return bool
      */
     public function validate($data, $rules) {
-        if (!is_array($data)) {
+        if ( ! is_array($data)) {
             trigger_error('validate expects $data to be an array.');
             return;
         }
 
-        if (!is_array($rules)) {
+        if ( ! is_array($rules)) {
             trigger_error('validate expects $rules to be an array.');
             return;
         }
@@ -97,13 +97,13 @@ class Validation {
      */
     protected function email($value, $field_name, $domain = NULL) {
         if ( ! is_null($domain)) {
-            $specific = "@$domain"; 
+            $specific = "@$domain";
             $verified = ($specific == substr($value, strpos($value, $specific)));
             if (filter_var($value, FILTER_VALIDATE_EMAIL) && $verified === FALSE)
                 $this->errors[] = $field_name . " needs to be a valid E-Mail.";
             return $verified;
         }
-        
+
         $valid = filter_var($value, FILTER_VALIDATE_EMAIL);
         if ($valid === FALSE)
             $this->errors[] = $field_name . " needs to be a valid E-Mail.";
@@ -132,7 +132,7 @@ class Validation {
      */
     protected function min_length($value, $field_name, $length) {
         $valid = TRUE;
-        if (!is_numeric($length)) {
+        if ( ! is_numeric($length)) {
             trigger_error('min_length Param: $length must be a number');
             return;
         }
@@ -153,7 +153,7 @@ class Validation {
      */
     protected function max_length($value, $field_name, $length) {
         $valid = TRUE;
-        if (!is_numeric($length)) {
+        if ( ! is_numeric($length)) {
             trigger_error('max_length Param: $length must be a number');
             return;
         }
