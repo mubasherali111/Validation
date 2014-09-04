@@ -35,15 +35,17 @@ class Validation {
         }
 
         $tag = ($ordered_list == TRUE) ? "ol" : "ul";
+        
         $output = "<$tag";
-        foreach ($attributes as $key => $value) {
-            $output .= " $key=\"$value\"";
-        }
+            foreach ($attributes as $key => $value) {
+                $output .= " $key=\"$value\"";
+            }
         $output .= ">";
 
         foreach ($this->errors as $error) {
             $output .= "<li>" . $error . "</li>";
         }
+        
         $output .= "</$tag>";
 
         echo $output;
