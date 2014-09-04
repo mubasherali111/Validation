@@ -16,7 +16,7 @@ A simple PHP input Validation Class.
 </ol>
 
 <h2>Example Code:</h2>
-```php
+```html+php
 <?php
 if ($_POST) {
     require_once 'Validation.php';
